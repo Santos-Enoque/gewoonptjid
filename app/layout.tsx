@@ -6,6 +6,7 @@ import Modal from "./components/modals/modal";
 import RegisterModal from "./components/modals/registerModal";
 import ToasterProvider from "./providers/toasterProvider";
 import LoginModal from "./components/modals/loginModal";
+import getCurrentUser from "./actions/getCurrentUser";
 
 const font = Nunito({
   subsets: ["latin"],
@@ -16,18 +17,19 @@ export const metadata: Metadata = {
   description: "Saloon booking app",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const currentUser = await getCurrentUser();
   return (
     <html lang="en">
       <body className={font.className}>
         <ToasterProvider />
         <LoginModal />
-        <RegisterModal /> 
-        <Navbar />
+        <RegisterModal />
+        <Navbar currentUser={currentUser} />
         {children}</body>
     </html>
   );
