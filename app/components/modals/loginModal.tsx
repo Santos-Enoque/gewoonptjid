@@ -83,7 +83,7 @@ const LoginModal = () => {
                 outline
                 label="Continue with Google"
                 icon={FcGoogle}
-                onClick={() => { signIn("google")}}
+                onClick={() => { signIn("google") }}
             />
             {/* <Button
                 outline
@@ -99,7 +99,7 @@ const LoginModal = () => {
               font-light
             "
             >
-                <p>Already have an account?
+                <p>Did you
                     <span
                         onClick={() => { }}
                         className="
@@ -107,7 +107,7 @@ const LoginModal = () => {
                   cursor-pointer 
                   hover:underline
                 "
-                    > Log in</span>
+                    > forget your password?</span>
                 </p>
             </div>
         </div>

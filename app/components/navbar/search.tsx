@@ -37,7 +37,7 @@ const Search = () => {
                         flex-1 
                         text-center
             ">
-                Any week
+                Any date
             </div>
             <div className="
            text-se
@@ -49,12 +49,12 @@ const Search = () => {
            items-center
            gap-3 
             ">
-                <div className="
+                {/* <div className="
                 hidden
                 sm:block
                 ">
                     Add guest
-                </div>
+                </div> */}
                 <div className="
                p-2
                bg-black 
