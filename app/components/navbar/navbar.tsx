@@ -5,10 +5,11 @@ import Logo from "./logo";
 import Search from "./search";
 import UserMenu from "./userMenu";
 import React from "react";
-
+import { SafeUser } from "@/app/types";
 interface NavbarProps {
-    currentUser?: User | null;
-}
+    currentUser?: SafeUser | null;
+  }
+
 const Navbar: React.FC<NavbarProps> = ({
     currentUser
 }) => {
